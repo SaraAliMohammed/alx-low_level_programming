@@ -17,7 +17,7 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		sum = fld1 + fld2;
-		printf("%1u", sum);
+		printf("%lu", sum);
 		fld1 = fld2;
 		fld2 = sum;
 		if (i == 49)
