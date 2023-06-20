@@ -12,7 +12,7 @@
 int main(void)
 {
 	int i;
-	unsigned int fld1 = 1, fld2, sum;
+	unsigned int fld1 = 0, fld2 = 1, sum;
 
 	for (i = 0; i < 50; i++)
 	{
