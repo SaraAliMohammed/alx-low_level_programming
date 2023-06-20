@@ -10,26 +10,29 @@ void print_times_table(int n)
 {
 	int num, mult, prod;
 
-	for (num = 0; num <= n; num++)
+	if (n < 0 || n > 15)
 	{
-		_putchar('0');
-		for (mult = 1; mult <= n; mult++)
+		for (num = 0; num <= n; num++)
 		{
-			_putchar(',');
-			_putchar(' ');
-
-			prod = num * mult;
-
-			/*
-			 * put space if prod is a single number
-			 * place the first digit if it is two numbers
-			*/
-			if (prod <= n)
+			_putchar('0');
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
 				_putchar(' ');
-			else
-				_putchar((prod / 10) + '0'); /*get the first digit*/
-			_putchar((prod % 10) + '0'); /*get the second digit*/
+
+				prod = num * mult;
+
+				/*
+				 * put space if prod is a single number
+				 * place the first digit if it is two numbers
+				*/
+				if (prod <= n)
+					_putchar(' ');
+				else
+					_putchar((prod / 10) + '0'); /*get the first digit*/
+				_putchar((prod % 10) + '0'); /*get the second digit*/
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
