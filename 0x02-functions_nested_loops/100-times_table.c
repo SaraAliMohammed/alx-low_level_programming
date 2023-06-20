@@ -10,7 +10,7 @@ void print_times_table(int n)
 {
 	int num, mult, prod;
 
-	if (n >= 0 || n <= 15)
+	if (n >= 0 && n <= 15)
 	{
 		for (num = 0; num <= n; num++)
 		{
@@ -26,10 +26,18 @@ void print_times_table(int n)
 				 * put space if prod is a single number
 				 * place the first digit if it is two numbers
 				*/
-				if (prod <= n)
+				if (prod <= 9)
 					_putchar(' ');
-				else
-					_putchar((prod / 10) + '0'); /*get the first digit*/
+				if (prod <= 99)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar((prod / 10) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+					_putchar((prod / 10) + '0');
 				_putchar((prod % 10) + '0'); /*get the second digit*/
 			}
 			_putchar('\n');
