@@ -21,9 +21,8 @@ int main(void)
 			total_sum += sum;
 		fld1 = fld2;
 		fld2 = sum;
-
-		printf("%.0f\n", total_sum);
 	}
+	printf("%.0f\n", total_sum);
 
 	return (0);
 }
