@@ -19,7 +19,7 @@ char *leet(char *str)
 		for (i = 0; i < sizeof(key) / sizeof(char); i++)
 		{
 			if (*str == key[i] || *str == key[i] + 32)
-				*str += 48 + value[i];
+				*str = 48 + value[i];
 		}
 		str++;
 	}
