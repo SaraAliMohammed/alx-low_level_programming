@@ -55,5 +55,5 @@ char *cap_string(char *str)
 			foundDilemiter = 0;
 		str++;
 	}
-	return (str);
+	return (ptr);
 }
