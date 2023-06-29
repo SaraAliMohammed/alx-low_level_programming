@@ -1,13 +1,27 @@
 #include "main.h"
 
 /**
- * print_line - 
- * @n:
+ * leet - encodes a string into 1337.
+ * @str: string parameter.
  *
  * Return: 0 on Success
 */
 
-void print_line(int n)
+char *leet(char *str)
 {
+	char *ptr = str;
+	char key[] = {'A', 'E', 'O', 'T', 'L'};
+	int value[] = {4, 3, 0, 7, 1};
+	unsigned int i;
 
+	while (*str)
+	{
+		for (i = 0; sizeof(key) / sizeof(char); i++)
+		{
+			if (*str == key[i] || *str == key[i] + 32)
+				*str += 40 + value[i];
+		}
+		str++;
+	}
+	return (ptr);
 }
