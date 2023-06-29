@@ -45,14 +45,14 @@ char *cap_string(char *str)
 	while (*str)
 	{
 		if (isDelimiter(*str))
-			foundDilemiter = 1;
-		else if (isLower(*str) && foundDilemiter)
+			foundDelimiter = 1;
+		else if (isLower(*str) && foundDelimiter)
 		{
 			*str -= 32;
-			foundDilemiter = 0;
+			foundDelimiter = 0;
 		}
 		else
-			foundDilemiter = 0;
+			foundDelimiter = 0;
 		str++;
 	}
 	return (ptr);
