@@ -16,10 +16,10 @@ char *leet(char *str)
 
 	while (*str)
 	{
-		for (i = 0; sizeof(key) / sizeof(char); i++)
+		for (i = 0; i < sizeof(key) / sizeof(char); i++)
 		{
 			if (*str == key[i] || *str == key[i] + 32)
-				*str += 40 + value[i];
+				*str += 48 + value[i];
 		}
 		str++;
 	}
