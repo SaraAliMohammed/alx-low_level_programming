@@ -28,6 +28,5 @@ unsigned int binary_to_uint(const char *b)
 		if (b[length] & 1)
 			ui += baseTwo;
 	}
-
 	return (ui);
 }
