@@ -1,0 +1,4 @@
+files = main.c
+files += school.c
+all:
+	gcc $(files) -o school
