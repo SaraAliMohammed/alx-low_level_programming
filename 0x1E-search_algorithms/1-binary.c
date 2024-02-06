@@ -13,6 +13,9 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t low, high, med;
 
+	if (array == NULL)
+		return (-1);
+
 	for (low = 0, high = size - 1; high >= low;)
 	{
 		printf("Searching in array: ");
