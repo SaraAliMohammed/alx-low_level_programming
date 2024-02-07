@@ -1,11 +1,10 @@
 #include "search_algos.h"
 
 /**
- * linear_skip - searches for a value in a sorted list of integers
- *		using the Jump search algorithm.
- * @list: pointer to the head of the list to search in.
- * @size: the number of elements in list.
- * @value: the value to search for
+ * linear_skip - searches for a value in a sorted a sorted
+ *		skip list of integers..
+ * @list: pointer to the head of the skip list to search in.
+ * @value: the value to search for.
  *
  * Return: pointer to the first node where value is located.
  */
